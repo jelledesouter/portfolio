@@ -1,0 +1,102 @@
+/* Base styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #011C40;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #4D56D6;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigatie styling */
+nav a {
+    color: #ffffff;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover-effect voor navigatielinks */
+nav a:hover {
+    background-color: #011C40; /* Donkerdere kleur bij hover */
+    color: #4D56D6; /* Tekstkleur bij hover */
+    border-color: #4D56D6; /* Randkleur bij hover */
+}
+
+main {
+    padding: 2em;
+}
+
+h2 {
+    color: #011C40;
+}
+
+/* Styling for the Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+input, textarea {
+    padding: 0.5em;
+    border: 1px solid #011C40;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4D56D6;
+    color: #ffffff;
+    padding: 0.7em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #011C40;
+}
+
+/* Layout for Widescreen */
+@media (min-width: 768px) {
+    header, footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+    }
+    .intro, .about, .overview, .details, .contact-form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* Layout for Mobile */
+@media (max-width: 767px) {
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    header, footer {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
