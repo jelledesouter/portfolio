@@ -1,4 +1,4 @@
-/* Base styling */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -18,7 +18,7 @@ header h1 {
     margin: 0;
 }
 
-/* Navigatie styling */
+
 nav a {
     color: #ffffff;
     padding: 10px 15px;
@@ -31,11 +31,11 @@ nav a {
     display: inline-block;
 }
 
-/* Hover-effect voor navigatielinks */
+
 nav a:hover {
-    background-color: #011C40; /* Donkerdere kleur bij hover */
-    color: #4D56D6; /* Tekstkleur bij hover */
-    border-color: #4D56D6; /* Randkleur bij hover */
+    background-color: #011C40; 
+    color: #4D56D6; 
+    border-color: #4D56D6; 
 }
 
 main {
@@ -46,7 +46,6 @@ h2 {
     color: #011C40;
 }
 
-/* Styling for the Contact Form */
 form {
     display: flex;
     flex-direction: column;
@@ -72,7 +71,6 @@ button:hover {
     background-color: #011C40;
 }
 
-/* Layout for Widescreen */
 @media (min-width: 768px) {
     header, footer {
         display: flex;
@@ -88,7 +86,6 @@ button:hover {
     }
 }
 
-/* Layout for Mobile */
 @media (max-width: 767px) {
     nav a {
         display: block;
