@@ -1,92 +1,167 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl-BE">
 
 <head>
-    <link rel="reset" href="css/reset.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- JavaScript: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
-      </script>
-  </head>
+  <link rel="reset" href="css/reset.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Jelle De Souter</title>
-    <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+    defer></script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+ 
+  <link rel="stylesheet" href="css/map.css">
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+ 
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JavaScript-bestanden-->
+ <script src="js/maptemse.js" defer></script>
+ <script src="js/script.js" defer></script>
+
 </head>
-<body class="p-3 m-0 border-0 bd-example">
-    <!-- Header Section with Navigation -->
-    <header>
-        <img src="assets/logo.png" alt="" width="23%" class="rounded">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">projecten</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <!-- Contact Section -->
-    <div class="container">
-        <div class="row">
-            <main id="contact" class="p-3 m-0 border-0 bd-example">
-                <section class="row">
-                    <h2>Contact</h2>
-                    <p>Heb je vragen of wil je samenwerken? Vul het formulier in en ik neem zo snel mogelijk contact met je op.</p>
-                    <form action="#" method="post">
-                        <label for="name">Naam:</label>
-                        <input type="text" id="name" name="name" required>
-                        
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        <label for="message">Bericht:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                        
-                        <button type="submit">Verstuur</button>
-                    </form>
-                </section>
-                <p>
-                </p>
-                <section  class="row">
-                    <article class="col-12 col-sm-6 col-md-2">
-                        <figure>
-                            <a href="https://www.facebook.com/">
-                            <img src="assets/Facebook_logo_(square).png" width="20%" alt="">
-                            </a>
-                        </figure>
-                    </article>
-                    <article class="col-12 col-sm-6 col-md-2">
-                        <figure>
-                            <a href="https://www.instagram.com/">
-                            <img src="assets/insta.png" width="20%" alt="">
-                            </a>
-                        </figure>
-                    </article>
-                    <article class="col-12 col-sm-6 col-md-2">
-                        <figure>
-                            <a href="https://www.linkedin.com/feed/">
-                            <img src="assets/linkdin.png" width="20%" alt="">
-                            </a>
-                        </figure>
-                    </article>
-                
-                </section>
-            </main>
-        </div>
+<body class="p-3 m-0 border-0 bd-example" style="position: relative;">
+  <nav class="navbar navbar-expand-md bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="POWER web" width="35%" height="35%">
+      </a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-right " id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h5">
+          <li class="nav-item ">
+            <a class="nav-link  blauwgrijs " href="index.html">home</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle  blauwgrijs" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">portfolio</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item blauwgrijs" href="portfolio.html">portfolio</a></li>
+              <li><a class="dropdown-item  blauwgrijs" href="project1.html">portfolio</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="contact.html">contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Jelle De Souter</p>
-    </footer>
+  </nav>
+ <hr>
+  <br>
+  <header class="row m-5">
+    <h1 class="col display-3 blauwgrijs text-center">may the power<br>be with you</h1>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <main class="col-md-9 pe-3">
+         
+        <section id="map" class="row">
+          <div id="map1" class="col-12 mb-3"></div>
+        </section>
+
+        <section id="contact" class="row">
+          <div class="col-12 mb-3">
+            <h2 class="text-uppercase fs-5 fw-bolder pt-3">contact</h2>
+            <p>Vul het registratieformulier in.<br>Velden met een * zijn verplicht.</p>
+          </div>
+          <hr>
+
+          <div class="container-contact100">
+
+            <div class="wrap-contact100">
+              <form class="contact100-form validate-form">
+                <span class="contact100-form-title">
+                  Send Us A Message
+                </span>
+        
+                <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+                  <input class="input100" type="text" name="name" placeholder="Full Name">
+                  <span class="focus-input100"></span>
+                </div>
+        
+                <div class="wrap-input100 validate-input" data-validate = "Please enter your email: e@a.x">
+                  <input class="input100" type="text" name="email" placeholder="E-mail">
+                  <span class="focus-input100"></span>
+                </div>
+        
+                <div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
+                  <input class="input100" type="text" name="phone" placeholder="Phone">
+                  <span class="focus-input100"></span>
+                </div>
+        
+                <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+                  <textarea class="input100" name="message" placeholder="Your Message"></textarea>
+                  <span class="focus-input100"></span>
+                </div>
+        
+                <div class="container-contact100-form-btn">
+                  <button class="contact100-form-btn">
+                    <span>
+                      <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                      Send
+                    </span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </section>
+      </main>
+
+      <aside class="col-md-2 border-start ps-5">
+        <h2 class="text-uppercase fs-5 fw-bolder pt-3">contact</h2>
+        <p>Jelle De Souter<br>
+          <a href="mailto:powerweb@ap.be">jelledesouter@gmail.com</a><br>
+          0468 33 81 12
+        </p>
+        <ul class="list-inline socials">
+          <li class="list-inline-item">
+            <a href="https://www.instagram.com/jelledesouter/" target="_blank">
+              <i class="bi bi-instagram blauwgrijs fs-6"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/jelle.desouter/" target="_blank">
+              <i class="bi bi-facebook blauwgrijs fs-6"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/jelle-de-souter-7303a62ba/" target="_blank">
+              <i class="bi bi-linkedin blauwgrijs fs-6"></i>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="container-fluid bg-light text-center h6 small p-4 mt-5">&copy; <span id="year"></span> POWER web enzo
+  </footer>
 </body>
+
 </html>
