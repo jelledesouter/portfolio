@@ -57,7 +57,7 @@
               aria-expanded="false">portfolio</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item blauwgrijs" href="portfolio.html">portfolio</a></li>
-              <li><a class="dropdown-item  blauwgrijs" href="project1.html">portfolio</a></li>
+              <li><a class="dropdown-item  blauwgrijs" href="project1.html">project1</a></li>
 
             </ul>
           </li>
@@ -71,63 +71,66 @@
  <hr>
   <br>
   <header class="row m-5">
-    <h1 class="col display-3 blauwgrijs text-center">may the power<br>be with you</h1>
+    <h1 class="col display-1 blauwgrijs text-center">contacteer ons</h1>
   </header>
 
   <div class="container">
     <div class="row">
       <main class="col-md-9 pe-3">
          
-        <section id="map" class="row">
+        <section id="map" class="row rounded">
           <div id="map1" class="col-12 mb-3"></div>
         </section>
 
         <section id="contact" class="row">
-          <div class="col-12 mb-3">
-            <h2 class="text-uppercase fs-5 fw-bolder pt-3">contact</h2>
-            <p>Vul het registratieformulier in.<br>Velden met een * zijn verplicht.</p>
+          <div class="col-12 mb-">
+            <h2 class="text-uppercase fs-5 fw-bolder pt-3">contactformulier</h2>
+            <p>Wenst u contact op te nemen met mij<br>dan kan u gerbuik maken van dit contact formulier.</p>
           </div>
           <hr>
 
-          <div class="container-contact100">
+          <div class="container">
+              <form action="https://api.web3forms.com/submit" method="POST">
 
-            <div class="wrap-contact100">
-              <form class="contact100-form validate-form">
-                <span class="contact100-form-title">
-                  Send Us A Message
-                </span>
-        
-                <div class="wrap-input100 validate-input" data-validate="Please enter your name">
-                  <input class="input100" type="text" name="name" placeholder="Full Name">
-                  <span class="focus-input100"></span>
-                </div>
-        
-                <div class="wrap-input100 validate-input" data-validate = "Please enter your email: e@a.x">
-                  <input class="input100" type="text" name="email" placeholder="E-mail">
-                  <span class="focus-input100"></span>
-                </div>
-        
-                <div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
-                  <input class="input100" type="text" name="phone" placeholder="Phone">
-                  <span class="focus-input100"></span>
-                </div>
-        
-                <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
-                  <textarea class="input100" name="message" placeholder="Your Message"></textarea>
-                  <span class="focus-input100"></span>
-                </div>
-        
-                <div class="container-contact100-form-btn">
-                  <button class="contact100-form-btn">
-                    <span>
-                      <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-                      Send
-                    </span>
-                  </button>
-                </div>
-              </form>
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="a1082047-5ff6-4437-801b-56730fc83173">
+            
+                <!-- Form Inputs. Each input must have a name="" attribute -->
+                <fieldset class="row g-3 mb-3">
+                  <legend class="text-uppercase fs-6 fw-bolder pt-3">gegevens</legend>
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label">voornaam <span>*</span></label>
+                    <input type="text" name="firstName" class="form-control" id="firstName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">achternaam <span>*</span></label>
+                    <input type="text" name="lastName" class="form-control" id="lastName" required>
+                  </div>
+                  <div class="col-6">
+                    <label for="mail" class="form-label">e-mail <span>*</span></label>
+                    <input type="email" name="email" class="form-control" id="mail" required>
+                  </div>
+                  <div class="col-6">
+                    <label for="company" class="form-label">berdijf</label>
+                    <input type="text" name="company" class="form-control" id="company">
+                  </div>
+                  <div class="col">
+                    <label for="message" class="form-label">uw bericht</label>
+                    <textarea type="text" name="message" class="form-control" required></textarea>
+                  </div>
+
+                </fieldset>
+
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+                <!-- Custom Confirmation / Success Page -->
+                <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+            
+                <button type="submit"class="btn btn-primary">verzenden</button>
+            
+            </form>
             </div>
-          </div>
 
         </section>
       </main>
@@ -160,7 +163,7 @@
     </div>
   </div>
 
-  <footer class="container-fluid bg-light text-center h6 small p-4 mt-5">&copy; <span id="year"></span> POWER web enzo
+  <footer class="container-fluid bg-light text-center h6 small p-4 mt-5">&copy; <span id="year"></span> Jelle De Souter
   </footer>
 </body>
 

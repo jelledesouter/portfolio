@@ -15,6 +15,10 @@ h1 {
   font-size: 17vw;
 }
 
+.leaflet-container{
+  border-radius: 10px;
+  }
+
 .active{
     color:#4d56d6 !important;
 }
@@ -59,12 +63,12 @@ a:hover {
   --bs-btn-bg: #252850;
   --bs-btn-border-color: #252850;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0e0e7d;
+  --bs-btn-hover-bg: #4d56d6;
   --bs-btn-hover-border-color: #1e392a;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0e0e7d;
-  --bs-btn-active-border-color: #0e0e7d;
+  --bs-btn-active-bg: #4d56d6;
+  --bs-btn-active-border-color: #4d56d6;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #252850;
