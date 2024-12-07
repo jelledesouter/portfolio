@@ -33,7 +33,7 @@ a:hover {
   color: #0e0e7d;
 }
 .blauw {
-  color: #252850;
+  color: #4d56d6;
 }
 
 .blauwgrijs {
@@ -167,8 +167,10 @@ body::before {
 .card:hover::before,
 .card:hover::after {
   opacity: 0;
-  transition: 0.7s;
+  transition: 1s;
 }
+
+
 
 
 
