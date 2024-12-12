@@ -54,12 +54,12 @@
             <a class="nav-link text-end blauwgrijs" href="index.html">home</a>
           </li>
           <li class="nav-item dropdown text-end">
-            <a class="nav-link dropdown-toggle  blauwgrijs" href="#" role="button" data-bs-toggle="dropdown"
+            <a class="nav-link dropdown-toggle  blauwgrijs"  role="button" data-bs-toggle="dropdown"
               aria-expanded="false">portfolio</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item blauwgrijs text-end" href="portfolio.html">portfolio</a></li>
               <li><a class="dropdown-item  blauwgrijs text-end" href="project1.html">Slimme Straatverlichting</a></li>
-    
+              <li><a class="dropdown-item  blauwgrijs text-end" href="project2.html">gestructureerd bekabelen</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -72,7 +72,7 @@
  <hr>
   <br>
   <header class="row m-5">
-    <h1 class="col display-1 blauwgrijs text-center">contacteer ons</h1>
+    <h1 class="col display-1 blauwgrijs text-center">contacteer mij</h1>
   </header>
 
   <div class="container">
@@ -91,33 +91,33 @@
           <hr>
 
           <div class="container">
-              <form action="https://api.web3forms.com/submit" method="POST">
+              <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
 
-                <!-- Replace with your Access Key -->
-                <input type="hidden" name="access_key" value="a1082047-5ff6-4437-801b-56730fc83173">
-            
                 <!-- Form Inputs. Each input must have a name="" attribute -->
                 <fieldset class="row g-3 mb-3">
                   <legend class="text-uppercase fs-6 fw-bolder pt-3">gegevens</legend>
-                  <div class="col-md-6">
+                  <div class="col-md-6 form-group">
                     <label for="firstName" class="form-label">voornaam <span>*</span></label>
                     <input type="text" name="firstName" class="form-control" id="firstName" required>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 form-group">
                     <label for="lastName" class="form-label">achternaam <span>*</span></label>
                     <input type="text" name="lastName" class="form-control" id="lastName" required>
                   </div>
-                  <div class="col-6">
+                  <div class="col-6 form-group">
                     <label for="mail" class="form-label">e-mail <span>*</span></label>
                     <input type="email" name="email" class="form-control" id="mail" required>
                   </div>
-                  <div class="col-6">
+                  <div class="col-6 form-group">
                     <label for="company" class="form-label">berdijf</label>
                     <input type="text" name="company" class="form-control" id="company">
                   </div>
-                  <div class="col">
+                  <div class="col-12 form-group ">
                     <label for="message" class="form-label">uw bericht</label>
                     <textarea type="text" name="message" class="form-control" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <div data-netlify-recaptcha="true"></div>
                   </div>
 
                 </fieldset>
@@ -125,8 +125,6 @@
                 <!-- Honeypot Spam Protection -->
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             
-                <!-- Custom Confirmation / Success Page -->
-                <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
             
                 <button type="submit"class="btn btn-primary">verzenden</button>
             
@@ -139,7 +137,7 @@
       <aside class="col-md-2 border-start ps-5">
         <h2 class="text-uppercase fs-5 fw-bolder pt-3">contact</h2>
         <p>Jelle De Souter<br>
-          <a href="mailto:powerweb@ap.be">jelledesouter@gmail.com</a><br>
+          <a href="mailto:jelledesouter@gmail.com">jelledesouter@gmail.com</a><br>
           
         </p>
         <ul class="list-inline socials">
