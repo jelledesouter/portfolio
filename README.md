@@ -1,226 +1,193 @@
-# Jelle De Souter - Portfolio Website
+# Portfolio Website - Jelle De Souter
 
-A modern, bilingual portfolio website for a Network & System Administration student, featuring dark mode, smooth animations, and a clean, tech-inspired design.
+## 📋 Updates
 
-## 🚀 Features
+### Wat is er nieuw?
 
-### Core Features
-- **Fully Responsive** - Works seamlessly on all devices (mobile, tablet, desktop)
-- **Dark/Light Mode** - Toggle between themes with smooth transitions
-- **Bilingual** - Switch between English and Dutch (EN/NL)
-- **Performance Optimized** - Pure vanilla JavaScript, no heavy frameworks
-- **Smooth Animations** - Subtle, professional scroll animations
-- **Modern Design** - Tech-inspired with gradients and glassmorphism effects
+**Projectenpagina toegevoegd!**
+- ✅ Quantum Computing & Security project card op de hoofdpagina
+- ✅ Volledige project detailpagina met:
+  - Project overzicht en beschrijving
+  - Belangrijkste onderzoeksonderwerpen
+  - Praktische implementatie details
+  - Belangrijkste bevindingen
+  - Downloadbare PDF
+  - Link naar Panopto video presentatie
+  - Sidebar met technologieën en statistieken
 
-### Sections
-1. **Hero Section** - Eye-catching introduction with animated code window
-2. **About Section** - Professional background and experience
-3. **Skills Section** - Technical expertise with animated progress bars
-4. **Projects Section** - Ready for portfolio items (currently placeholder)
-5. **Contact Section** - Functional contact form with email integration
-
-## 📁 File Structure
+## 📁 Bestandsstructuur
 
 ```
-/
-├── index.html          # Main HTML file
+portfolio/
+├── index.html                          # Hoofdpagina met project card
+├── project-quantum.html                # Detailpagina Quantum Computing project
 ├── css/
-│   └── style.css      # All styles (CSS variables, dark mode, responsive)
+│   └── style.css                       # Complete styling (inclusief project pages)
 ├── js/
-│   └── script.js      # All JavaScript (theme, language, animations)
-└── README.md          # This file
+│   └── script.js                       # Alle JavaScript functionaliteit
+└── magnum_opus_quantum_computing_security.pdf  # Downloadbare PDF
 ```
 
-## 🎨 Design System
+## 🚀 Hoe te gebruiken
 
-### Colors
-- **Primary Accent**: `#0066ff` (Tech Blue)
-- **Secondary Accent**: `#00d4aa` (Cyan)
-- **Tertiary Accent**: `#7c3aed` (Purple)
+### Lokaal openen
 
-### Typography
-- **Primary Font**: Inter (Google Fonts)
-- **Monospace Font**: JetBrains Mono (for code elements)
+1. Download alle bestanden
+2. Behoud de mapstructuur zoals hierboven
+3. Open `index.html` in je browser
+4. Scroll naar de Projects sectie om je project te zien
+5. Klik op "View Details" voor de volledige projectpagina
+6. Klik op het download icoon om de PDF te downloaden
 
-### Dark Mode
-Automatic dark mode with CSS variables, controlled by `data-theme` attribute on `<html>` element.
+### Online plaatsen
 
-## 🛠️ Setup & Installation
+#### Op Netlify (Aanbevolen - gratis):
+1. Maak een account op [netlify.com](https://netlify.com)
+2. Sleep alle bestanden naar Netlify Drop
+3. Je website is live! Je krijgt een URL zoals: `your-name.netlify.app`
+4. Je kunt een custom domain toevoegen als je die hebt
 
-### Basic Setup
-1. Clone or download the repository
-2. No build process required - pure HTML/CSS/JS
-3. Open `index.html` in a browser
+#### Op GitHub Pages (Gratis):
+1. Maak een GitHub account
+2. Creëer een repository genaamd `jelledesouter.github.io`
+3. Upload alle bestanden
+4. Ga naar Settings > Pages
+5. Selecteer de main branch
+6. Je site is live op: `https://jelledesouter.github.io`
 
-### For Local Development
-```bash
-# Option 1: Use Python's built-in server
-python -m http.server 8000
+## ✨ Features
 
-# Option 2: Use Node.js http-server
-npx http-server
+### Hoofdpagina (index.html)
+- ✅ Modern hero section met animated code window
+- ✅ About sectie met persoonlijke informatie
+- ✅ Skills sectie met progress bars
+- ✅ **Projects sectie met je Quantum Computing project**
+- ✅ Contact formulier met email functionaliteit
+- ✅ Dark/Light mode toggle
+- ✅ Nederlands/Engels toggle
+- ✅ Volledig responsive design
 
-# Then open: http://localhost:8000
+### Project Detailpagina (project-quantum.html)
+- ✅ Hero sectie met project meta informatie
+- ✅ Download buttons voor PDF en video
+- ✅ 4 topic cards met belangrijkste onderzoeksonderwerpen
+- ✅ Practical implementation showcase met code voorbeeld
+- ✅ 4 genummerde bevindingen (findings)
+- ✅ Resources sectie met direct links
+- ✅ Sidebar met:
+  - Gebruikte technologieën
+  - Project statistieken
+  - Gerelateerde tags
+- ✅ Zelfde styling en navigatie als hoofdpagina
+- ✅ Dark/Light mode support
+- ✅ Volledig responsive
+
+## 🎨 Styling & Design
+
+De website gebruikt een moderne, tech-geïnspireerde design met:
+- 🌈 Gradient accenten (blauw naar cyaan)
+- 🌓 Dark mode (standaard) en light mode
+- 💫 Smooth animaties en transitions
+- 📱 Volledig responsive voor alle schermformaten
+- 🎯 Glassmorphism effecten
+- ⚡ Performance optimized
+
+### Kleuren
+
+```css
+/* Light Mode */
+--accent-primary: #0066ff (Tech Blue)
+--accent-secondary: #00d4aa (Cyan)
+--accent-tertiary: #7c3aed (Purple)
+
+/* Dark Mode (default) */
+--bg-primary: #0a0e1a
+--bg-secondary: #111827
+--text-primary: #f9fafb
+--text-secondary: #d1d5db
 ```
 
-### For Deployment
+## 🔧 Aanpassingen maken
 
-#### Netlify (Recommended for contact form)
-1. Connect your Git repository to Netlify
-2. No build command needed
-3. Publish directory: `/`
-4. The contact form uses `mailto:` - works without backend
+### Meer projecten toevoegen
 
-#### GitHub Pages
-1. Push to GitHub repository
-2. Go to Settings > Pages
-3. Select branch and `/` (root) folder
-4. Your site will be live at `https://username.github.io/repo-name`
+1. **Kopieer de project card in index.html:**
+   ```html
+   <article class="project-card" data-category="your-category">
+       <!-- Pas de content aan -->
+   </article>
+   ```
 
-#### Other Static Hosts
-- Vercel
-- Cloudflare Pages
-- Firebase Hosting
+2. **Maak een nieuwe detailpagina:**
+   - Kopieer `project-quantum.html`
+   - Hernoem naar bijv. `project-network.html`
+   - Pas de content aan
+   - Update de navigatie links
 
-## ⚙️ Configuration
+### Teksten aanpassen
 
-### Update Personal Information
-
-#### Contact Email
-In `index.html`, find and update:
+Alle teksten hebben `data-en` en `data-nl` attributen:
 ```html
-<a href="mailto:jelledesouter@gmail.com">jelledesouter@gmail.com</a>
+<h2 data-en="English Text" data-nl="Nederlandse Tekst">English Text</h2>
 ```
 
-And in `js/script.js`:
-```javascript
-const mailtoLink = `mailto:jelledesouter@gmail.com?subject=${subject}&body=${body}`;
-```
+De JavaScript zorgt automatisch voor de vertaling wanneer je van taal wisselt.
 
-#### LinkedIn Profile
-In `index.html`, update the LinkedIn URL:
-```html
-<a href="https://www.linkedin.com/in/jelle-de-souter-7303a62ba/" target="_blank">
-```
+### Kleuren aanpassen
 
-#### Skills & Progress Bars
-In `index.html`, adjust the skill percentages:
-```html
-<div class="skill-progress" style="--progress: 85%"></div>
-```
-
-### Customizing Colors
-Edit CSS variables in `css/style.css`:
+Pas de CSS variabelen aan in `css/style.css`:
 ```css
 :root {
-    --accent-primary: #0066ff;      /* Change primary color */
-    --accent-secondary: #00d4aa;    /* Change secondary color */
-    --accent-tertiary: #7c3aed;     /* Change tertiary color */
+    --accent-primary: #jouw-kleur;
+    --accent-secondary: #jouw-kleur;
 }
 ```
 
-### Adding Projects
-Replace the placeholder in the Projects section with actual project cards:
-```html
-<div class="project-card">
-    <img src="project-image.jpg" alt="Project name">
-    <h3>Project Name</h3>
-    <p>Project description</p>
-    <a href="#" class="btn btn-primary">View Project</a>
-</div>
-```
+### Eigen informatie toevoegen
 
-## 🌐 Translations
+- Email: Zoek naar `jelledesouter@gmail.com` en vervang
+- LinkedIn: Zoek naar de LinkedIn URL en vervang
+- Naam: Zoek naar "Jelle De Souter" en vervang
 
-### Adding New Language
-1. Add data attributes to HTML elements:
-```html
-<element data-en="English text" data-nl="Dutch text" data-fr="French text">
-```
+## 📱 Browser Support
 
-2. Update the language toggle in `index.html`:
-```html
-<span class="lang-option" data-lang="fr">FR</span>
-```
+- ✅ Chrome/Edge (Latest 2 versions)
+- ✅ Firefox (Latest 2 versions)
+- ✅ Safari (Latest 2 versions)
+- ✅ Mobile browsers (iOS Safari 12+, Chrome Android)
 
-3. Update `js/script.js` to include new language
+## 🐛 Troubleshooting
 
-### Updating Existing Translations
-Simply modify the `data-en` and `data-nl` attributes in `index.html`.
+### PDF download werkt niet
+- Zorg dat `magnum_opus_quantum_computing_security.pdf` in de root folder staat
+- Controleer of de bestandsnaam exact overeenkomt in de HTML
 
-## 🎯 Browser Support
+### Dark mode blijft niet opgeslagen
+- Controleer of localStorage enabled is in je browser
+- Test in een andere browser
 
-- Chrome/Edge: Latest 2 versions ✅
-- Firefox: Latest 2 versions ✅
-- Safari: Latest 2 versions ✅
-- Mobile browsers: iOS Safari 12+, Chrome Android ✅
+### Taal toggle werkt niet
+- Check of alle elementen de juiste `data-en` en `data-nl` attributen hebben
+- Open de browser console (F12) om errors te checken
 
-## ⚡ Performance
+### Layout ziet er raar uit
+- Clear je browser cache (Ctrl+F5 of Cmd+Shift+R)
+- Controleer of alle CSS en JS bestanden correct geladen zijn
+- Check of de mapstructuur correct is
 
-### Optimization Techniques Used
-- Pure vanilla JavaScript (no frameworks = smaller bundle)
-- CSS variables for theming (no JS overhead)
-- Intersection Observer for scroll animations (efficient)
-- Debounced scroll events
-- Lazy loading ready
-- Preload critical fonts
-- Optimized CSS with minimal repaints
+## 📞 Support
 
-### Lighthouse Scores Target
-- Performance: 95+
-- Accessibility: 100
-- Best Practices: 100
-- SEO: 100
+Als je hulp nodig hebt met de website:
+1. Check eerst de troubleshooting sectie hierboven
+2. Controleer of alle bestanden de juiste namen hebben
+3. Test in een andere browser
 
-## 🔧 Troubleshooting
+## 📄 Licentie
 
-### Dark Mode Not Working
-- Check if localStorage is enabled in browser
-- Clear localStorage: `localStorage.clear()`
-- Check browser console for errors
-
-### Language Toggle Not Working
-- Ensure all translatable elements have both `data-en` and `data-nl` attributes
-- Check browser console for errors
-
-### Contact Form Not Opening Email Client
-- This is expected behavior - the form uses `mailto:` which requires an email client
-- For a backend form, integrate with Netlify Forms, Formspree, or similar service
-
-### Animations Not Smooth
-- Check if "Reduce motion" is enabled in OS accessibility settings
-- The site respects `prefers-reduced-motion` media query
-
-## 📝 License
-
-This is a personal portfolio website. Feel free to use as inspiration, but please:
-- Don't use identical personal information
-- Credit if using substantial code portions
-- Modify to make it your own
-
-## 🤝 Contributing
-
-This is a personal website, but suggestions are welcome:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📧 Contact
-
-**Jelle De Souter**
-- Email: jelledesouter@gmail.com
-- LinkedIn: [linkedin.com/in/jelle-de-souter-7303a62ba](https://www.linkedin.com/in/jelle-de-souter-7303a62ba/)
-- Website: jelledesouter.com
-
-## 🙏 Acknowledgments
-
-- Fonts: [Google Fonts](https://fonts.google.com/)
-- Icons: Custom SVG icons
-- Inspiration: Modern web design trends from Dribbble, Awwwards
+Dit is jouw persoonlijke portfolio website. Gebruik het zoals je wilt!
 
 ---
 
-**Built with ❤️ by Jelle De Souter**
-
-*Last updated: November 2025*
+**Laatste update:** November 2025
+**Gemaakt voor:** Jelle De Souter
+**Project:** Portfolio Website met Quantum Computing Project

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quantum Computing & Security - Research on the impact of quantum computing on cryptography">
+    <title>Quantum Computing & Security | Jelle De Souter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html#home" class="logo">
+                <span class="logo-text">JDS</span>
+                <span class="logo-cursor">_</span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html#home" class="nav-link" data-en="Home" data-nl="Home">Home</a>
+                <a href="index.html#about" class="nav-link" data-en="About" data-nl="Over">About</a>
+                <a href="index.html#skills" class="nav-link" data-en="Skills" data-nl="Vaardigheden">Skills</a>
+                <a href="index.html#projects" class="nav-link active" data-en="Projects" data-nl="Projecten">Projects</a>
+                <a href="index.html#contact" class="nav-link" data-en="Contact" data-nl="Contact">Contact</a>
+            </div>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                
+                <button class="lang-toggle" id="langToggle">
+                    <span class="lang-option" data-lang="en">EN</span>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option active" data-lang="nl">NL</span>
+                </button>
+
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="project-hero-background">
+            <div class="grid-overlay"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        
+        <div class="container">
+            <a href="index.html#projects" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"/>
+                    <polyline points="12 19 5 12 12 5"/>
+                </svg>
+                <span data-en="Back to Projects" data-nl="Terug naar Projecten">Back to Projects</span>
+            </a>
+            
+            <div class="project-hero-content">
+                <h1 class="gradient-text" data-en="Quantum Computing & Security" data-nl="Quantum Computing & Security">
+                    Quantum Computing & Security
+                </h1>
+                <p class="project-hero-subtitle" data-en="Magnum Opus Research Project - Academic Year 2024-2025" data-nl="Magnum Opus Onderzoeksproject - Academiejaar 2024-2025">
+                    Magnum Opus Research Project - Academic Year 2024-2025
+                </p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        <span>November 2024 - November 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span>Individual Research</span>
+                    </div>
+                </div>
+                
+                <div class="project-actions">
+                    <a href="magnum_opus_quantum_computing_security.pdf" download class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        <span data-en="Download PDF" data-nl="Download PDF">Download PDF</span>
+                    </a>
+                    <a href="https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c935a432-bdaa-4587-98c7-b2ec01283dff" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="10 8 16 12 10 16 10 8"/>
+                        </svg>
+                        <span data-en="Watch Video" data-nl="Bekijk Video">Watch Video</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="project-layout">
+                <!-- Main Content -->
+                <div class="project-main">
+                    <!-- Overview -->
+                    <div class="content-block">
+                        <h2 data-en="Project Overview" data-nl="Projectoverzicht">Project Overview</h2>
+                        <p data-en="This comprehensive research project explores the fundamental impact of quantum computing on modern cryptographic systems. The study investigates how quantum algorithms, particularly Shor's algorithm, pose a significant threat to widely-used encryption methods like RSA and ECC." data-nl="Dit uitgebreide onderzoeksproject verkent de fundamentele impact van quantum computing op moderne cryptografische systemen. Het onderzoek gaat na hoe quantum-algoritmes, met name Shor's algoritme, een aanzienlijke bedreiging vormen voor veelgebruikte encryptiemethoden zoals RSA en ECC.">
+                            This comprehensive research project explores the fundamental impact of quantum computing on modern cryptographic systems. The study investigates how quantum algorithms, particularly Shor's algorithm, pose a significant threat to widely-used encryption methods like RSA and ECC.
+                        </p>
+                        <p data-en="The project includes both theoretical research and practical implementation, featuring a hands-on experiment where Shor's algorithm is simulated using IBM's Qiskit framework to demonstrate the potential of quantum computing in breaking classical encryption." data-nl="Het project omvat zowel theoretisch onderzoek als praktische implementatie, met een hands-on experiment waarbij Shor's algoritme wordt gesimuleerd met behulp van IBM's Qiskit-framework om het potentieel van quantum computing bij het breken van klassieke encryptie te demonstreren.">
+                            The project includes both theoretical research and practical implementation, featuring a hands-on experiment where Shor's algorithm is simulated using IBM's Qiskit framework to demonstrate the potential of quantum computing in breaking classical encryption.
+                        </p>
+                    </div>
+
+                    <!-- Key Topics -->
+                    <div class="content-block">
+                        <h2 data-en="Key Research Topics" data-nl="Belangrijkste Onderzoeksonderwerpen">Key Research Topics</h2>
+                        <div class="topic-grid">
+                            <div class="topic-card">
+                                <div class="topic-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m-2 2l-4.2 4.2m8.4 0l-4.2-4.2m-2-2l-4.2-4.2"/>
+                                    </svg>
+                                </div>
+                                <h3 data-en="Quantum Computing Fundamentals" data-nl="Quantum Computing Fundamenten">Quantum Computing Fundamentals</h3>
+                                <p data-en="Exploration of qubits, superposition, and entanglement - the building blocks of quantum computing." data-nl="Verkenning van qubits, superpositie en verstrengeling - de bouwstenen van quantum computing.">
+                                    Exploration of qubits, superposition, and entanglement - the building blocks of quantum computing.
+                                </p>
+                            </div>
+                            <div class="topic-card">
+                                <div class="topic-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                </div>
+                                <h3 data-en="Classical Cryptography" data-nl="Klassieke Cryptografie">Classical Cryptography</h3>
+                                <p data-en="Analysis of RSA and ECC encryption methods and their mathematical foundations." data-nl="Analyse van RSA en ECC encryptiemethoden en hun wiskundige fundamenten.">
+                                    Analysis of RSA and ECC encryption methods and their mathematical foundations.
+                                </p>
+                            </div>
+                            <div class="topic-card">
+                                <div class="topic-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                        <path d="M2 17l10 5 10-5"/>
+                                        <path d="M2 12l10 5 10-5"/>
+                                    </svg>
+                                </div>
+                                <h3 data-en="Shor's Algorithm" data-nl="Shor's Algoritme">Shor's Algorithm</h3>
+                                <p data-en="Detailed study of the quantum algorithm that can efficiently factor large numbers." data-nl="Gedetailleerde studie van het quantum-algoritme dat grote getallen efficiënt kan ontbinden.">
+                                    Detailed study of the quantum algorithm that can efficiently factor large numbers.
+                                </p>
+                            </div>
+                            <div class="topic-card">
+                                <div class="topic-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <h3 data-en="Post-Quantum Cryptography" data-nl="Post-Quantum Cryptografie">Post-Quantum Cryptography</h3>
+                                <p data-en="Investigation of quantum-resistant encryption algorithms being developed by NIST." data-nl="Onderzoek naar quantum-resistente encryptie-algoritmes die door NIST worden ontwikkeld.">
+                                    Investigation of quantum-resistant encryption algorithms being developed by NIST.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Practical Implementation -->
+                    <div class="content-block">
+                        <h2 data-en="Practical Implementation" data-nl="Praktische Implementatie">Practical Implementation</h2>
+                        <div class="implementation-showcase">
+                            <div class="implementation-text">
+                                <h3 data-en="Hands-on Experiment with Qiskit" data-nl="Hands-on Experiment met Qiskit">Hands-on Experiment with Qiskit</h3>
+                                <p data-en="The project includes a practical demonstration of Shor's algorithm using IBM's Qiskit quantum computing framework. The implementation factors the number 15 into its prime components (3 and 5), demonstrating the quantum approach to integer factorization." data-nl="Het project omvat een praktische demonstratie van Shor's algoritme met behulp van IBM's Qiskit quantum computing framework. De implementatie ontbindt het getal 15 in zijn priemcomponenten (3 en 5), wat de quantum-benadering van geheeltallige factorisatie demonstreert.">
+                                    The project includes a practical demonstration of Shor's algorithm using IBM's Qiskit quantum computing framework. The implementation factors the number 15 into its prime components (3 and 5), demonstrating the quantum approach to integer factorization.
+                                </p>
+                                <ul>
+                                    <li data-en="Python environment setup with Qiskit" data-nl="Python-omgeving setup met Qiskit">Python environment setup with Qiskit</li>
+                                    <li data-en="Quantum circuit construction" data-nl="Quantum circuit constructie">Quantum circuit construction</li>
+                                    <li data-en="Period finding using QFT" data-nl="Periode vinden met QFT">Period finding using QFT</li>
+                                    <li data-en="Classical post-processing" data-nl="Klassieke naverwerking">Classical post-processing</li>
+                                </ul>
+                            </div>
+                            <div class="implementation-visual">
+                                <div class="code-window">
+                                    <div class="code-header">
+                                        <div class="code-dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="code-title">shors_algorithm.py</div>
+                                    </div>
+                                    <div class="code-content">
+                                        <pre><code><span class="code-comment"># Shor's Algorithm Implementation</span>
+<span class="code-keyword">from</span> qiskit <span class="code-keyword">import</span> QuantumCircuit
+<span class="code-keyword">from</span> qiskit_aer <span class="code-keyword">import</span> Aer
+
+<span class="code-keyword">def</span> <span class="code-function">shors_algorithm</span>(N):
+    <span class="code-comment"># Quantum period finding</span>
+    <span class="code-variable">qc</span> = QuantumCircuit(<span class="code-string">4</span>, <span class="code-string">4</span>)
+    
+    <span class="code-comment"># Apply Hadamard gates</span>
+    <span class="code-keyword">for</span> i <span class="code-keyword">in</span> range(<span class="code-string">2</span>):
+        qc.h(i)
+    
+    <span class="code-comment"># Quantum Fourier Transform</span>
+    qc.h(<span class="code-string">0</span>)
+    qc.cp(-np.pi/<span class="code-string">2</span>, <span class="code-string">0</span>, <span class="code-string">1</span>)
+    
+    <span class="code-keyword">return</span> factors</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Findings -->
+                    <div class="content-block">
+                        <h2 data-en="Key Findings & Conclusions" data-nl="Belangrijkste Bevindingen & Conclusies">Key Findings & Conclusions</h2>
+                        <div class="findings-list">
+                            <div class="finding-item">
+                                <div class="finding-number">01</div>
+                                <div class="finding-content">
+                                    <h4 data-en="Quantum Threat is Real" data-nl="Quantum Dreiging is Reëel">Quantum Threat is Real</h4>
+                                    <p data-en="Quantum computers with sufficient qubits (estimated 4,000-8,000 logical qubits) could break RSA-2048 encryption within hours or days, compared to millions of years for classical computers." data-nl="Quantum computers met voldoende qubits (geschat op 4.000-8.000 logische qubits) zouden RSA-2048 encryptie binnen uren of dagen kunnen breken, vergeleken met miljoenen jaren voor klassieke computers.">
+                                        Quantum computers with sufficient qubits (estimated 4,000-8,000 logical qubits) could break RSA-2048 encryption within hours or days, compared to millions of years for classical computers.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="finding-item">
+                                <div class="finding-number">02</div>
+                                <div class="finding-content">
+                                    <h4 data-en="Timeline: 2030-2040" data-nl="Tijdlijn: 2030-2040">Timeline: 2030-2040</h4>
+                                    <p data-en="Experts predict cryptographically relevant quantum computers will be available between 2030 and 2040, meaning organizations must start transitioning to post-quantum cryptography now." data-nl="Experts voorspellen dat cryptografisch relevante quantum computers tussen 2030 en 2040 beschikbaar zullen zijn, wat betekent dat organisaties nu moeten beginnen met de overgang naar post-quantum cryptografie.">
+                                        Experts predict cryptographically relevant quantum computers will be available between 2030 and 2040, meaning organizations must start transitioning to post-quantum cryptography now.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="finding-item">
+                                <div class="finding-number">03</div>
+                                <div class="finding-content">
+                                    <h4 data-en="Harvest Now, Decrypt Later" data-nl="Harvest Now, Decrypt Later">Harvest Now, Decrypt Later</h4>
+                                    <p data-en="Adversaries are already storing encrypted data with the intention of decrypting it once quantum computers become available, making the threat immediate for long-term sensitive data." data-nl="Tegenstanders slaan al versleutelde gegevens op met de bedoeling deze te ontsleutelen zodra quantum computers beschikbaar komen, wat de dreiging onmiddellijk maakt voor langdurig gevoelige gegevens.">
+                                        Adversaries are already storing encrypted data with the intention of decrypting it once quantum computers become available, making the threat immediate for long-term sensitive data.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="finding-item">
+                                <div class="finding-number">04</div>
+                                <div class="finding-content">
+                                    <h4 data-en="Solutions Exist" data-nl="Oplossingen Bestaan">Solutions Exist</h4>
+                                    <p data-en="NIST has already selected post-quantum cryptographic algorithms (CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON, SPHINCS+) that are resistant to quantum attacks and can run on classical computers." data-nl="NIST heeft al post-quantum cryptografische algoritmes geselecteerd (CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON, SPHINCS+) die resistent zijn tegen quantum-aanvallen en kunnen draaien op klassieke computers.">
+                                        NIST has already selected post-quantum cryptographic algorithms (CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON, SPHINCS+) that are resistant to quantum attacks and can run on classical computers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resources -->
+                    <div class="content-block">
+                        <h2 data-en="Resources & Links" data-nl="Bronnen & Links">Resources & Links</h2>
+                        <div class="resources-grid">
+                            <a href="magnum_opus_quantum_computing_security.pdf" download class="resource-card">
+                                <div class="resource-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <polyline points="14 2 14 8 20 8"/>
+                                        <line x1="16" y1="13" x2="8" y2="13"/>
+                                        <line x1="16" y1="17" x2="8" y2="17"/>
+                                        <polyline points="10 9 9 9 8 9"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 data-en="Full Research Paper (PDF)" data-nl="Volledige Onderzoekspaper (PDF)">Full Research Paper (PDF)</h4>
+                                    <p data-en="Download the complete 31-page research document" data-nl="Download het volledige 31-pagina onderzoeksdocument">Download the complete 31-page research document</p>
+                                </div>
+                            </a>
+                            <a href="https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c935a432-bdaa-4587-98c7-b2ec01283dff" target="_blank" rel="noopener" class="resource-card">
+                                <div class="resource-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="23 7 16 12 23 17 23 7"/>
+                                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 data-en="Video Presentation" data-nl="Video Presentatie">Video Presentation</h4>
+                                    <p data-en="Watch the 6-minute Panopto presentation" data-nl="Bekijk de 6-minuten Panopto presentatie">Watch the 6-minute Panopto presentation</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3 data-en="Technologies Used" data-nl="Gebruikte Technologieën">Technologies Used</h3>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <span class="tech-icon">🐍</span>
+                                <span>Python 3.8+</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">⚛️</span>
+                                <span>Qiskit</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🔐</span>
+                                <span>Cryptography</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">📊</span>
+                                <span>NumPy</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">📈</span>
+                                <span>Matplotlib</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">💻</span>
+                                <span>VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 data-en="Project Stats" data-nl="Project Statistieken">Project Stats</h3>
+                        <div class="stat-item">
+                            <span class="stat-label" data-en="Research Duration" data-nl="Onderzoeksduur">Research Duration</span>
+                            <span class="stat-value">12 months</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label" data-en="Document Pages" data-nl="Document Pagina's">Document Pages</span>
+                            <span class="stat-value">31 pages</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label" data-en="Code Lines" data-nl="Code Regels">Code Lines</span>
+                            <span class="stat-value">~150 lines</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label" data-en="References" data-nl="Referenties">References</span>
+                            <span class="stat-value">10+ sources</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 data-en="Related Topics" data-nl="Gerelateerde Onderwerpen">Related Topics</h3>
+                        <div class="tags-list">
+                            <span class="tag">Quantum Computing</span>
+                            <span class="tag">Cryptography</span>
+                            <span class="tag">RSA</span>
+                            <span class="tag">ECC</span>
+                            <span class="tag">Shor's Algorithm</span>
+                            <span class="tag">Post-Quantum</span>
+                            <span class="tag">Qiskit</span>
+                            <span class="tag">NIST</span>
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-text">
+                <p>&copy; <span id="year"></span> Jelle De Souter. <span data-en="All rights reserved." data-nl="Alle rechten voorbehouden.">All rights reserved.</span></p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/jelle-de-souter-7303a62ba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -319,16 +319,50 @@
                 <h2 class="section-title" data-en="Projects" data-nl="Projecten">Projects</h2>
             </div>
 
-            <div class="projects-placeholder">
-                <div class="placeholder-icon">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                    </svg>
-                </div>
-                <h3 data-en="Projects Coming Soon" data-nl="Projecten Binnenkort Beschikbaar">Projects Coming Soon</h3>
-                <p data-en="I'm currently working on documenting my projects. Check back soon to see my latest work in network administration, cybersecurity, and IT infrastructure." data-nl="Ik ben momenteel bezig met het documenteren van mijn projecten. Kom binnenkort terug om mijn laatste werk in netwerkbeheer, cyberbeveiliging en IT-infrastructuur te zien.">
-                    I'm currently working on documenting my projects. Check back soon to see my latest work in network administration, cybersecurity, and IT infrastructure.
-                </p>
+            <div class="projects-grid">
+                <!-- Magnum Opus Project -->
+                <article class="project-card" data-category="research">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m-2 2l-4.2 4.2m8.4 0l-4.2-4.2m-2-2l-4.2-4.2"/>
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="project-tag">Quantum Computing</span>
+                                <span class="project-tag">Security</span>
+                                <span class="project-tag">Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-en="Quantum Computing & Security" data-nl="Quantum Computing & Security">
+                            Quantum Computing & Security
+                        </h3>
+                        <p class="project-description" data-en="An in-depth research project exploring the impact of quantum computing on modern cryptography, including a practical implementation of Shor's algorithm using Qiskit." data-nl="Een diepgaand onderzoeksproject over de impact van quantum computing op moderne cryptografie, inclusief een praktische implementatie van Shor's algoritme met Qiskit.">
+                            An in-depth research project exploring the impact of quantum computing on modern cryptography, including a practical implementation of Shor's algorithm using Qiskit.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Qiskit</span>
+                            <span>Cryptography</span>
+                            <span>Research</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="project-quantum.html" class="btn btn-secondary" data-en="View Details" data-nl="Bekijk Details">View Details</a>
+                            <a href="magnum_opus_quantum_computing_security.pdf" download class="btn btn-icon" aria-label="Download PDF" title="Download PDF">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -378,15 +412,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-                    <!-- Netlify form detection -->
-                    <input type="hidden" name="form-name" value="contact" />
-                    
-                    <!-- Honeypot spam protection (hidden field) -->
-                    <div style="display: none;">
-                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                    </div>
-
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label for="name" data-en="Name" data-nl="Naam">Name</label>
                         <input type="text" id="name" name="name" required>
