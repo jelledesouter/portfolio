@@ -268,7 +268,7 @@ style.textContent = `
 document.head.appendChild(style);
 
 // ================================
-// Contact Form Management
+// Contact Form Management (Netlify Forms)
 // ================================
 function initContactForm() {
     elements.contactForm?.addEventListener('submit', handleFormSubmit);
@@ -277,15 +277,8 @@ function initContactForm() {
 async function handleFormSubmit(e) {
     e.preventDefault();
     
-    const formData = {
-        name: document.getElementById('name')?.value,
-        email: document.getElementById('email')?.value,
-        subject: document.getElementById('subject')?.value,
-        message: document.getElementById('message')?.value
-    };
-    
-    // Get submit button
-    const submitButton = elements.contactForm.querySelector('button[type="submit"]');
+    const form = e.target;
+    const submitButton = form.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
     
     // Show loading state
@@ -293,25 +286,28 @@ async function handleFormSubmit(e) {
     submitButton.textContent = state.currentLang === 'nl' ? 'Verzenden...' : 'Sending...';
     
     try {
-        // Create mailto link (since this is a static site)
-        const subject = encodeURIComponent(formData.subject);
-        const body = encodeURIComponent(
-            `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-        );
-        const mailtoLink = `mailto:jelledesouter@gmail.com?subject=${subject}&body=${body}`;
+        // Submit to Netlify
+        const formData = new FormData(form);
         
-        // Open email client
-        window.location.href = mailtoLink;
+        const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        });
         
-        // Show success message
-        showFormMessage('success', 
-            state.currentLang === 'nl' 
-                ? 'Bedankt! Je e-mailclient wordt geopend.' 
-                : 'Thank you! Your email client is opening.'
-        );
-        
-        // Reset form
-        elements.contactForm.reset();
+        if (response.ok) {
+            // Show success message
+            showFormMessage('success', 
+                state.currentLang === 'nl' 
+                    ? 'Bedankt! Je bericht is verzonden.' 
+                    : 'Thank you! Your message has been sent.'
+            );
+            
+            // Reset form
+            form.reset();
+        } else {
+            throw new Error('Form submission failed');
+        }
         
     } catch (error) {
         console.error('Form submission error:', error);
@@ -321,7 +317,7 @@ async function handleFormSubmit(e) {
                 : 'Something went wrong. Please try again later.'
         );
     } finally {
-        // Reset button
+        // Reset button after delay
         setTimeout(() => {
             submitButton.disabled = false;
             submitButton.textContent = originalText;
