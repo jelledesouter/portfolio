@@ -415,26 +415,146 @@
         </div>
     </footer>
 
-    <!-- JavaScript removed for project page to fix navigation -->
-    <!-- <script src="js/script.js"></script> -->
+    <!-- Custom Script for Project Page -->
     <script>
-        // Set year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Theme toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
+        // ================================
+        // Global State
+        // ================================
+        const state = {
+            currentLang: 'en',
+            theme: 'light',
+            isMobileMenuOpen: false
+        };
+
+        // ================================
+        // DOM Elements
+        // ================================
+        const elements = {
+            navbar: document.getElementById('navbar'),
+            navMenu: document.getElementById('navMenu'),
+            themeToggle: document.getElementById('themeToggle'),
+            langToggle: document.getElementById('langToggle'),
+            langOptions: document.querySelectorAll('.lang-option'),
+            mobileToggle: document.getElementById('mobileToggle'),
+            yearSpan: document.getElementById('year'),
+            translatableElements: document.querySelectorAll('[data-en]')
+        };
+
+        // ================================
+        // Initialize
+        // ================================
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLanguage();
+            updateYear();
+            
+            // Add event listeners
+            elements.themeToggle?.addEventListener('click', toggleTheme);
+            elements.langToggle?.addEventListener('click', handleLanguageToggle);
+            elements.mobileToggle?.addEventListener('click', toggleMobileMenu);
+            
+            // Close mobile menu on resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768 && state.isMobileMenuOpen) {
+                    toggleMobileMenu();
+                }
+            });
         });
-        
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        html.setAttribute('data-theme', savedTheme);
+
+        // ================================
+        // Theme Management
+        // ================================
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            state.theme = savedTheme;
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+
+        function toggleTheme() {
+            const newTheme = state.theme === 'light' ? 'dark' : 'light';
+            state.theme = newTheme;
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Add animation class
+            document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+        }
+
+        // ================================
+        // Language Management
+        // ================================
+        function initLanguage() {
+            const savedLang = localStorage.getItem('language') || 'en';
+            state.currentLang = savedLang;
+            updateLanguage(savedLang);
+        }
+
+        function handleLanguageToggle(e) {
+            if (e.target.classList.contains('lang-option')) {
+                const lang = e.target.getAttribute('data-lang');
+                if (lang && lang !== state.currentLang) {
+                    state.currentLang = lang;
+                    updateLanguage(lang);
+                    localStorage.setItem('language', lang);
+                }
+            }
+        }
+
+        function updateLanguage(lang) {
+            // Update active language indicator
+            elements.langOptions.forEach(option => {
+                option.classList.toggle('active', option.getAttribute('data-lang') === lang);
+            });
+            
+            // Update all translatable elements
+            elements.translatableElements.forEach(element => {
+                const text = element.getAttribute(`data-${lang}`);
+                if (text) {
+                    // Handle different element types
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = text;
+                    } else if (element.tagName === 'BUTTON') {
+                        element.textContent = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'nl' ? 'nl-BE' : 'en';
+        }
+
+        // ================================
+        // Mobile Menu Management
+        // ================================
+        function toggleMobileMenu() {
+            state.isMobileMenuOpen = !state.isMobileMenuOpen;
+            elements.navMenu?.classList.toggle('active');
+            elements.mobileToggle?.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = state.isMobileMenuOpen ? 'hidden' : '';
+        }
+
+        // ================================
+        // Utility Functions
+        // ================================
+        function updateYear() {
+            if (elements.yearSpan) {
+                elements.yearSpan.textContent = new Date().getFullYear();
+            }
+        }
+
+        // ================================
+        // Keyboard Navigation
+        // ================================
+        document.addEventListener('keydown', (e) => {
+            // ESC key closes mobile menu
+            if (e.key === 'Escape' && state.isMobileMenuOpen) {
+                toggleMobileMenu();
+            }
+        });
     </script>
 </body>
 </html>
